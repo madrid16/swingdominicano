@@ -87,8 +87,14 @@ SECRET_KEY = '@bi%c=3bpp8(0xjyi%tdfi(_pex*r2aduo=gb!p8qvb&=v*#=r'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
+    #('django.template.loaders.cached.Loader', (
+        'django.template.loaders.filesystem.Loader',
+        'django.template.loaders.app_directories.Loader',
+    #)),
+    #'hamlpy.template.loaders.HamlPyFilesystemLoader',
+    #'hamlpy.template.loaders.HamlPyAppDirectoriesLoader',  
+    #'django.template.loaders.filesystem.Loader',
+    #'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
 
@@ -108,6 +114,7 @@ ROOT_URLCONF = 'swingdominicano.urls'
 WSGI_APPLICATION = 'swingdominicano.wsgi.application'
 
 TEMPLATE_DIRS = (
+    '/Users/mmadrid/Development/work/swingdominicano/app/templates/',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -120,6 +127,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
