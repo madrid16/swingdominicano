@@ -1,0 +1,95 @@
+a 
+	text-decoration: none
+
+body 
+	background-attachment: fixed
+	background-image: url('/static/images/background.png') 
+	background-repeat: no-repeat
+	background-size: 100%
+	font-family: 'Gafata'
+	font-weight: 400
+	font-size: 16px
+
+	section
+		height 0%
+		width 100%
+
+		figure
+			bottom 0
+			display block
+			position absolute
+	
+			img
+				height 85%
+
+		.socialmedia
+			background-image url('../images/social_media_bg.png')
+			background-repeat no-repeat
+			background-size 100%
+			bottom 3em
+			display inline-block
+			float right
+			position absolute
+			right 2em
+			width 18em
+			vertical-align bottom
+
+			a
+				-o-transition all 0.3s
+				-moz-transition all 0.3s
+				-webkit-transition all 0.3s
+				-ms-transition all 0.3s
+				display inline-block
+				height 1.5em
+				margin 0.6em
+				width 1.5em
+				vertical-align middle
+
+			a#facebook
+				background url('../images/facebook.png') left top no-repeat
+			a#twitter
+				background url('../images/twitter.png') left top no-repeat
+			a#youtube
+				background url('../images/youtube.png') left top no-repeat
+
+			a:hover
+				background-position left -34px !important
+
+footer 
+	bottom: 0
+	position: absolute
+	width 100%
+
+	div
+		background-color: #100a13
+		box-shadow: 0px -15px 25px 10px rgba(0,0,0,0.75)
+
+header
+	margin: 0
+
+nav
+	background-color: #100a13
+	box-shadow: 0px 20px 25px 10px rgba(0,0,0,0.75)
+	text-align: center
+
+	figure 
+		display: inline-block
+		float: left
+
+	ul
+		display: inline-block
+		list-style: none
+		padding: 1em
+		vertical-align: top
+
+		li
+			display: inline-block
+			padding: 0 2.5em
+			vertical-align: top
+
+			a 
+				color: #a2a2a2
+				font-size: 1.1em
+
+			a:hover
+				color: #0c78bc

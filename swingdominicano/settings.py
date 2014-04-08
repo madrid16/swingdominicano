@@ -1,7 +1,10 @@
+import os
 # Django settings for swingdominicano project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+CURRENT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)))
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -61,7 +64,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(CURRENT_PATH, '/static/') 
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -72,6 +75,8 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(CURRENT_PATH, 'static'),
+    #'/Users/mmadrid/Development/work/swingdominicano/static/',
 )
 
 # List of finder classes that know how to find static files in
@@ -87,8 +92,14 @@ SECRET_KEY = '@bi%c=3bpp8(0xjyi%tdfi(_pex*r2aduo=gb!p8qvb&=v*#=r'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
+    #('django.template.loaders.cached.Loader', (
+        'django.template.loaders.filesystem.Loader',
+        'django.template.loaders.app_directories.Loader',
+    #)),
+    #'hamlpy.template.loaders.HamlPyFilesystemLoader',
+    #'hamlpy.template.loaders.HamlPyAppDirectoriesLoader',  
+    #'django.template.loaders.filesystem.Loader',
+    #'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
 
@@ -108,6 +119,7 @@ ROOT_URLCONF = 'swingdominicano.urls'
 WSGI_APPLICATION = 'swingdominicano.wsgi.application'
 
 TEMPLATE_DIRS = (
+    '/Users/mmadrid/Development/work/swingdominicano/templates/',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -120,6 +132,8 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app',
+    'contact',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
