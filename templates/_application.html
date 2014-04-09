@@ -20,8 +20,8 @@
 				<img src="{% static 'images/logo.png' %}" width="250" alt="Swing Dominicano" />
 			</figure>
 			<ul>
-				<li><a href="/">INICIO</a></li>
-				<li><a href="/post">POST</a></li>
+				<li><a href="{% url 'app.views.index' %}">INICIO</a></li>
+				<li><a href="{% url 'app.views.post' %}">POST</a></li>
 				<li><a href="#">FOTOS</a></li>
 				<li><a href="#">VIDEOS Y MÚSICA</a></li>
 				<li><a href="#">CONTACTO</a></li>
