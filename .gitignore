@@ -3,3 +3,9 @@
 
 htmlcov/*
 venv/*
+
+/venv
+/htmlcov
+
+venv/
+htmlcov/
