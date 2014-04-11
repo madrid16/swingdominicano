@@ -1,0 +1,15 @@
+{% extends '_application.html' %}
+{% block content %}
+	<div id="form_contact">
+		<form action="#">
+			<label for="">Nombre : (*)</label><input type="text" placeholder="Escriba su nombre" />
+			<label for="">Tu e-mail : (*)</label><input type="text" placeholder="ejemplo@ejemplo.com" />
+			<label for="">Asunto : (*)</label><input type="text" placeholder="Presupesto para evento" />
+			<label for="">Teléfono : (*)</label><input type="text" placeholder="93478540" />
+			<label for="">Mensaje : (*)</label><textarea name="" id="" cols="30" rows="30" placeholder="Escriba su mensaje aqui"></textarea>
+		</form>
+	</div>
+	<div id="map">
+		<div id="mapa" style="width:100%;"></div>
+	</div>
+{% endblock %}
