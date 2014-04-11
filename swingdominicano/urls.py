@@ -11,7 +11,8 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'swingdominicano.views.home', name='home'),
     url(r'^$', 'app.views.index', name='index'),
-    url(r'^post$', 'app.views.post', name='post'),
+    url(r'^post$', 'post.views.index', name='post'),
+    url(r'^photos$', 'photos.views.list_photos', name='photos'),
     url(r'^contact$', 'contact.views.contact', name='contact'),
     # url(r'^swingdominicano/', include('swingdominicano.foo.urls')),
 

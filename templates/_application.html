@@ -10,6 +10,12 @@
 
 	<link rel="stylesheet" type="text/css" href="{% static 'css/stylesheet.css' %}" />
 
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+	<script src="{% static 'js/contact.js' %}" type="text/javascript"></script>
+
 	<title>Swing Dominicano</title>
 
 </head>
@@ -21,10 +27,10 @@
 			</figure>
 			<ul>
 				<li><a href="{% url 'app.views.index' %}">INICIO</a></li>
-				<li><a href="{% url 'app.views.post' %}">POST</a></li>
-				<li><a href="#">FOTOS</a></li>
+				<li><a href="{% url 'post.views.index' %}">POST</a></li>
+				<li><a href="{% url 'photos.views.list_photos' %}">FOTOS</a></li>
 				<li><a href="#">VIDEOS Y MÚSICA</a></li>
-				<li><a href="#">CONTACTO</a></li>
+				<li><a href="{% url 'contact.views.contact' %}">CONTACTO</a></li>
 			</ul>
 		</nav>
 	</header>
