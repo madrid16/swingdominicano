@@ -4,8 +4,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -14,13 +14,14 @@ urlpatterns = patterns('',
     url(r'^post$', 'post.views.index', name='post'),
     url(r'^photos$', 'photos.views.list_photos', name='photos'),
     url(r'^contact$', 'contact.views.contact', name='contact'),
+    url(r'^video$', 'video.views.video', name='video'),
     # url(r'^swingdominicano/', include('swingdominicano.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
 )
 
 if settings.DEBUG:
