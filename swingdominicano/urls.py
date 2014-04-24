@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^photos$', 'photos.views.list_photos', name='photos'),
     url(r'^contact$', 'contact.views.contact', name='contact'),
     url(r'^video$', 'video.views.video', name='video'),
+    (r'^tinymce/', include('tinymce.urls')),
     # url(r'^swingdominicano/', include('swingdominicano.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

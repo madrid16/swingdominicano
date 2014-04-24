@@ -1,53 +1,9 @@
 {% extends '_application.html' %}
 {% block content %}
-	
-	<article class="posts">
-		<p>Mi gente linda, pronto se viene el video clip del tema&nbsp;&quot;Te Amo&quot; junto a la productora RD3</p>
-		<p>un abrazo grande y muchas gracias por pedi rel tema en las radios</p>
-		<p>Swing Dominicano</p>
-		<label>hace 2 días</label>
-	</article>
-
-	<article class="posts">
-		<p>Mi gente linda, pronto se viene el video clip del tema&nbsp;&quot;Te Amo&quot; junto a la productora RD3</p>
-		<p>un abrazo grande y muchas gracias por pedi rel tema en las radios</p>
-		<p>Swing Dominicano</p>
-		<label>hace 2 días</label>
-	</article>
-
-	<article class="posts">
-		<p>Mi gente linda, pronto se viene el video clip del tema&nbsp;&quot;Te Amo&quot; junto a la productora RD3</p>
-		<p>un abrazo grande y muchas gracias por pedi rel tema en las radios</p>
-		<p>Swing Dominicano</p>
-		<label>hace 2 días</label>
-	</article>
-
-	<article class="posts">
-		<p>Mi gente linda, pronto se viene el video clip del tema&nbsp;&quot;Te Amo&quot; junto a la productora RD3</p>
-		<p>un abrazo grande y muchas gracias por pedi rel tema en las radios</p>
-		<p>Swing Dominicano</p>
-		<label>hace 2 días</label>
-	</article>
-
-	<article class="posts">
-		<p>Mi gente linda, pronto se viene el video clip del tema&nbsp;&quot;Te Amo&quot; junto a la productora RD3</p>
-		<p>un abrazo grande y muchas gracias por pedi rel tema en las radios</p>
-		<p>Swing Dominicano</p>
-		<label>hace 2 días</label>
-	</article>
-
-	<article class="posts">
-		<p>Mi gente linda, pronto se viene el video clip del tema&nbsp;&quot;Te Amo&quot; junto a la productora RD3</p>
-		<p>un abrazo grande y muchas gracias por pedi rel tema en las radios</p>
-		<p>Swing Dominicano</p>
-		<label>hace 2 días</label>
-	</article>
-
-	<article class="posts">
-		<p>Mi gente linda, pronto se viene el video clip del tema&nbsp;&quot;Te Amo&quot; junto a la productora RD3</p>
-		<p>un abrazo grande y muchas gracias por pedi rel tema en las radios</p>
-		<p>Swing Dominicano</p>
-		<label>hace 2 días</label>
-	</article>
-
+	{% for post in posts %}
+		<article class="posts">
+		  <p>{{ post.text|safe }}</p>
+		  <label>{{ post.date|timesince }}</label>
+		</article>
+	{% endfor %}
 {% endblock %}
