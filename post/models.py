@@ -1,8 +1,9 @@
 from django.db import models
+from tinymce.models import HTMLField
 
-class post(models.Model):
-	text = models.TextField(max_length=300)
+class Post(models.Model):
+	text = HTMLField()
 	date = models.DateTimeField(auto_now=True)
 
 	def __unicode__(self):
-		return self.text
+		return '%s %s' % (self.text, self.date)
