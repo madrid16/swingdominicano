@@ -4,3 +4,4 @@ coverage==3.6
 dj-static==0.0.5
 uwsgi=2.0.3
 django-tinymce=1.5.2
+django-data-migration=0.2.0
