@@ -3,32 +3,19 @@
 {% block content %}
 
 	<div id="principal_video">
-		<iframe width="560" height="315" src="//www.youtube.com/embed/gru1L9-5HrQ" frameborder="0" allowfullscreen></iframe>
+		{{ video_principal.code|safe }}
+		<!-- 560 315 -->
 	</div>
+
 	<div id="video_list">
-		<div class="video_content">
-			<div class="img_play">&nbsp;</div>
-			<iframe width="300" height="139" src="//www.youtube.com/embed/gru1L9-5HrQ" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<div class="video_content">
-			<div class="img_play">&nbsp;</div>
-			<iframe width="300" height="139" src="//www.youtube.com/embed/gru1L9-5HrQ" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<div id="test" class="video_content">
-			<div class="img_play">&nbsp;</div>
-			<iframe width="300" height="139" src="//www.youtube.com/embed/5rVpfq4uf8g?rel=0" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<div class="video_content">
-			<div class="img_play">&nbsp;</div>
-			<iframe width="300" height="139" src="//www.youtube.com/embed/gru1L9-5HrQ" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<div class="video_content">
-			<div class="img_play">&nbsp;</div>
-			<iframe width="300" height="139" src="//www.youtube.com/embed/gru1L9-5HrQ" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<div class="video_content">
-			<div class="img_play">&nbsp;</div>
-			<iframe width="300" height="139" src="//www.youtube.com/embed/gru1L9-5HrQ" frameborder="0" allowfullscreen></iframe>
-		</div>
+
+		{% for video in videos %}
+			<div class="video_content">
+				<div class="img_play">&nbsp;</div>
+				{{ video.code|safe }}
+				<!-- 300 139 -->
+			</div>
+		{% endfor %}
+
 	</div>
 {% endblock %}
