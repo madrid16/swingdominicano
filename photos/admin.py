@@ -1,5 +1,10 @@
 from django.contrib import admin
 
-from models import photo
+from .models import Photo
 
-admin.site.register(photo)
+
+class PhotoAdmin(admin.ModelAdmin):
+    list_display = ('name', 'show_img')
+
+
+admin.site.register(Photo, PhotoAdmin)

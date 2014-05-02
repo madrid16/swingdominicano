@@ -2,29 +2,11 @@
 {% block content %}
 	<article class="content_photos">
 
-		<figure class="block_photos">
-			<img class="photos" src="https://scontent-b-mia.xx.fbcdn.net/hphotos-prn1/t1.0-9/1604423_10202504210978857_1747515821_n.jpg" alt="" width="300" />
-		</figure>
-
-		<figure class="block_photos">
-			<img class="photos" src="https://scontent-b-mia.xx.fbcdn.net/hphotos-prn1/t1.0-9/1604423_10202504210978857_1747515821_n.jpg" alt="" width="300" />
-		</figure>
-
-		<figure class="block_photos">
-			<img class="photos" src="https://scontent-b-mia.xx.fbcdn.net/hphotos-prn1/t1.0-9/1604423_10202504210978857_1747515821_n.jpg" alt="" width="300" />
-		</figure>
-
-		<figure class="block_photos">
-			<img class="photos" src="https://scontent-b-mia.xx.fbcdn.net/hphotos-prn1/t1.0-9/1604423_10202504210978857_1747515821_n.jpg" alt="" width="300" />
-		</figure>
-
-		<figure class="block_photos">
-			<img class="photos" src="https://scontent-b-mia.xx.fbcdn.net/hphotos-prn1/t1.0-9/1604423_10202504210978857_1747515821_n.jpg" alt="" width="300" />
-		</figure>
-
-		<figure class="block_photos">
-			<img class="photos" src="https://scontent-b-mia.xx.fbcdn.net/hphotos-prn1/t1.0-9/1604423_10202504210978857_1747515821_n.jpg" alt="" width="300" />
-		</figure>
+        {% for photo in photos %}
+            <figure class="block_photos">
+                <img class="photos" src="{{ photo.url.url }}" alt="" width="300" />
+            </figure>
+        {% endfor %}
 
 	</article>
 {% endblock %}
